@@ -1,4 +1,5 @@
 <?php
+include ("models/db/DataBase.php");
 class Select extends DataBase{
     private $tabname;
     

@@ -9,3 +9,6 @@ div.loginpage{
     padding: 10px;
     background-color: grey;
 } 
+div.center{
+    margin: 10px auto;
+}

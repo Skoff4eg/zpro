@@ -1,6 +1,6 @@
 <?php
 include ("models/db/DataBase.php");
-class Insert extends DataBase{
+class Update extends DataBase{
      private $tabname;
      private $data;
      
@@ -12,7 +12,7 @@ class Insert extends DataBase{
     }
     
     function insertData(){
-        $query = "INSERT INTO $this->tabname ";
+        $query = "UPDATE $this->tabname SET";
         foreach ($data as $key => $value) {
             $keys[] = $key;
             $values[] = $value;
@@ -20,6 +20,7 @@ class Insert extends DataBase{
         $query .= "(`".implode($keys, "`,`"). "`) VALUES ";
         $query .= "('".implode($values, "','"). "')";
     }
-    
+
 }
+
 ?>

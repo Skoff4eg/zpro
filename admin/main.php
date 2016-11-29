@@ -61,6 +61,7 @@
 if(isset($_POST['mlogout'])){
     print_r($_POST);
     session_destroy();
+    echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL='>";
     //include ("login.php");
 }
 ?>

@@ -16,24 +16,22 @@
 <body>
 <?php
 session_start();
+
 if(isset($_SESSION['user']) && $_SESSION['user'] == 'admin'){
     include("admin/main.php");
     //require("admin/main.php");    
 }
 else{
-    
+    include ("views/publishedcomment.php");
+    include ("views/comment.php");
     include ("login.php");
+    
     //include ("views/comment.php");
 }
 
-    include ("models/db/DataBase.php");
-    include ("models/db/Select.php");
-    $new1 = new Select("comments");
-    $result = $new1->getPublishedData();
-    echo "<pre>";
-    print_r ($result);
-    echo "</pre>";
+    
+    
 ?>
-<a href="login.php">login</a>
+<a href="login.php">11111login</a>
 </body>
 </html>
