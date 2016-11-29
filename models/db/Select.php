@@ -1,5 +1,4 @@
 <?php
-//include("DataBase.php");
 class Select extends DataBase{
     private $tabname;
     
@@ -18,6 +17,15 @@ class Select extends DataBase{
     
     function getAllData(){
         $query = "SELECT * FROM $this->tabname";
+    }
+    
+    function getPublishedData(){
+        $query = "SELECT * FROM $this->tabname WHERE `status` = 1";
+        if($sqldata = mysql_query($query)){
+            for($i = 0;$i < mysql_num_rows($sqldata); $i++)
+                $data[$i] = mysql_fetch_array($sqldata);
+        }
+        return $data;
     }
     
     function getUserData($params){

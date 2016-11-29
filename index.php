@@ -17,19 +17,23 @@
 <?php
 session_start();
 if(isset($_SESSION['user']) && $_SESSION['user'] == 'admin'){
-    include("admin/main.php");    
+    include("admin/main.php");
+    //require("admin/main.php");    
 }
 else{
+    
     include ("login.php");
+    //include ("views/comment.php");
 }
 
-    /*include ("views/db/DataBase.php");
-    include ("views/db/Select.php");
-    $new1 = new Select("users");
-    $result = $new1->getRecordById(1);
-    print_r ($result);*/
-    
+    include ("models/db/DataBase.php");
+    include ("models/db/Select.php");
+    $new1 = new Select("comments");
+    $result = $new1->getPublishedData();
+    echo "<pre>";
+    print_r ($result);
+    echo "</pre>";
 ?>
-
+<a href="login.php">login</a>
 </body>
 </html>

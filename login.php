@@ -61,8 +61,8 @@ if(isset($_POST['msubmit'])){
    /* echo "<prie>";
     print_r($_POST);
     echo "<prie>";*/
-    include ("views/db/DataBase.php");
-    include ("views/db/Select.php");
+    include ("models/db/DataBase.php");
+    include ("models/db/Select.php");
     $params = array();
     $params['login'] = $_POST['mlogin'];
     $params['password'] = $_POST['mpassword'];
