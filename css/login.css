@@ -1,4 +1,11 @@
 div.loginpage a{
+    /*margin: 50px 50px 50px 50px; 
+    padding: 10px;*/
+    background-color: grey;
+} 
+div.loginpage{
+    width: 100px;
+    margin: 50px 50px 50px 50px; 
     padding: 10px;
     background-color: grey;
 } 

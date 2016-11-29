@@ -1,7 +1,8 @@
 <?php
-include("DataBase.php");
 
-class 
+class User{
+    
+}
 
 
 ?>

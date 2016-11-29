@@ -13,15 +13,23 @@
 
 </head>
 
-<body><?php
-    include ("views/db/DataBase.php");
-    $new1 = new DataBase;
-    $result = $new1->connectToDb();
-    print_r ($result);
+<body>
+<?php
+session_start();
+if(isset($_SESSION['user']) && $_SESSION['user'] == 'admin'){
+    include("admin/main.php");    
+}
+else{
+    include ("login.php");
+}
+
+    /*include ("views/db/DataBase.php");
+    include ("views/db/Select.php");
+    $new1 = new Select("users");
+    $result = $new1->getRecordById(1);
+    print_r ($result);*/
     
 ?>
-<div class="loginpage">
-<a href="login.php">Login page</a>
-</div>
+
 </body>
 </html>

@@ -28,7 +28,7 @@
             <div class="alert alert-info">
                 Please login.
             </div>
-            <form class="form-horizontal" action="index.html" method="post">
+            <form class="form-horizontal" action="" method="post">
                 <fieldset>
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
@@ -45,7 +45,7 @@
                     <div class="clearfix"></div>
 
                     <p class="center col-md-5">
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="submit" class="btn btn-primary" name="msubmit">Login</button>
                     </p>
                 </fieldset>
             </form>
@@ -56,9 +56,25 @@
 </div>
 
 <!-- javascript -->
-
-
-
+<?php
+if(isset($_POST['msubmit'])){
+   /* echo "<prie>";
+    print_r($_POST);
+    echo "<prie>";*/
+    include ("views/db/DataBase.php");
+    include ("views/db/Select.php");
+    $params = array();
+    $params['login'] = $_POST['mlogin'];
+    $params['password'] = $_POST['mpassword'];
+    $new1 = new Select("users");
+    $result = $new1->getUserData($params);
+    if(count($result)>0){
+        $_SESSION['user'] = $result[0]['login'];
+        
+    }
+    print_r ($_SESSION);
+}
+?>
 
 </body>
 </html>
