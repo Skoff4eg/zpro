@@ -17,8 +17,7 @@ class Update extends DataBase{
             $keys[] = $key;
             $values[] = $value;
         }
-        $query .= "(`".implode($keys, "`,`"). "`) VALUES ";
-        $query .= "('".implode($values, "','"). "')";
+
     }
 
 }

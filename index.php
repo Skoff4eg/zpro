@@ -17,7 +17,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['user']) && $_SESSION['user'] == 'admin'){
+/*if(isset($_SESSION['user']) && $_SESSION['user'] == 'admin'){
     include("admin/main.php");
     //require("admin/main.php");    
 }
@@ -27,11 +27,11 @@ else{
     include ("login.php");
     
     //include ("views/comment.php");
-}
-
+}*/
+include ("controllers/Comments.php");
     
     
 ?>
-<a href="login.php">11111login</a>
+
 </body>
 </html>
