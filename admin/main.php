@@ -3,11 +3,7 @@
     //include ("index1.php");
     
 ?>
-<form class="form-horizontal" action="" method="post">
-<p class="center col-md-5">
-                        <button type="submit" class="btn btn-primary" name="mlogout">Logout</button>
-                    </p>
-</form>
+
 <!-- left menu starts -->
         <div class="col-sm-2 col-lg-2">
             <div class="sidebar-nav">
@@ -57,6 +53,11 @@
         </div>
         <!--/span-->
         <!-- left menu ends -->
+<form class="form-horizontal" action="" method="post">
+<p class="center col-md-5">
+                        <button type="submit" class="btn btn-primary" name="mlogout">Logout</button>
+                    </p>
+</form>
 <?php
 if(isset($_POST['mlogout'])){
     print_r($_POST);
