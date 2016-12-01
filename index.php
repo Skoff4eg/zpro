@@ -8,12 +8,17 @@
 
     <!-- The styles -->
     <link href="css/login.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <!-- The fav icon -->
     <link rel="shortcut icon" href="img/favicon.ico">
 
 </head>
 
 <body>
+<div class="container">
+<div class="row">
+<div class="col-lg-1 col-md-1"></div>
+<div class="col-lg-10 col-md-10">
 <?php
 session_start();
 
@@ -32,6 +37,9 @@ include ("controllers/Comments.php");
     
     
 ?>
-
+</div>
+<div class="col-lg-1 col-md-1"></div>
+</div>
+</div>
 </body>
 </html>

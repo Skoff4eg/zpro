@@ -1,12 +1,12 @@
 <?php
-    echo('you have access');
+    //echo('you have access');
     include ("views/menu.php");
     
 ?>
 
 
 <form class="form-horizontal" action="" method="post">
-    <p class="center col-md-5">
+    <p class="center col-md-2">
         <button type="submit" class="btn btn-primary" name="mlogout">Logout</button>
     </p>
 </form>

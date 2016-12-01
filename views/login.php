@@ -23,7 +23,8 @@
     </div>
 
     <div class="row">
-        <div class="well col-md-5 center login-box">
+    <div class="col-md-2"></div>
+        <div class="well col-md-8 col-md-offset-2 center login-box">
             <div class="alert alert-info">
                 Please login.
             </div>

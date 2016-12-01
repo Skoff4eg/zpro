@@ -10,7 +10,7 @@
     </tr>
     </thead>
     <tbody>
-        <?php print_r ($Allresult);?>
+        <?php //print_r ($Allresult);?>
         <?php for( $i=0; $i< count($Allresult); $i++){
     echo "<tr>
         <td>{$Allresult[$i]['name']}</td>
