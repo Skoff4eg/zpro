@@ -1,5 +1,5 @@
 <?php
-include ("models/db/DataBase.php");
+//include ("models/db/DataBase.php");
 class Insert extends DataBase{
      private $tabname;
      private $data;

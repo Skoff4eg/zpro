@@ -12,12 +12,18 @@
     <tbody>
         <?php //print_r ($Allresult);?>
         <?php for( $i=0; $i< count($Allresult); $i++){
+            if($Allresult[$i]['status'] == 1 ){
+                $stat = "<td class='center'>
+            <span class='label-success label label-default'>Active</span>
+        </td>";} else{
+                $stat = "<td class='center '>
+            <span class='label-default label label-danger'>Hidden</span>
+        </td>";
+            }
     echo "<tr>
         <td>{$Allresult[$i]['name']}</td>
         <td class='center'>{$Allresult[$i]['email']}</td>
-        <td class='center'>
-            <span class='label-success label label-default'>Active</span>
-        </td>
+        {$stat}
         <td class='center'>{$Allresult[$i]['text']}</td>
         <td class='center'>
             <a class='btn btn-info' href='?action=edit&id={$Allresult[$i]['id']}'>

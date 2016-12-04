@@ -1,5 +1,5 @@
 <?php //include'css/login.css';
-    //include ("models/db/DataBase.php");
+    include ("models/db/DataBase.php");
     include ("models/db/Select.php");
     $new1 = new Select("comments");
     $result = $new1->getPublishedData();
