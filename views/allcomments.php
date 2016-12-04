@@ -20,7 +20,7 @@
         </td>
         <td class='center'>{$Allresult[$i]['text']}</td>
         <td class='center'>
-            <a class='btn btn-info' href='#'>
+            <a class='btn btn-info' href='?action=edit&id={$Allresult[$i]['id']}'>
                 <i class='glyphicon glyphicon-edit icon-white'></i>
                 Edit
             </a>
