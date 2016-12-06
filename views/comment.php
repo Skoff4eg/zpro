@@ -4,7 +4,7 @@
 <input placeholder="You name" name="c_username" class="form-control"><br>
 <input placeholder="You email" name="c_useremail" class="form-control"><br>
 <input type="file" class="form-control"><br>
-<textarea placeholder="Enter you comment" name="msg" class="form-control"></textarea><br><br>
+<textarea placeholder="Enter you comment" name="c_msg" class="form-control"></textarea><br><br>
 <input type="submit" name="c_ok" value="Send" >
 </form>
 
