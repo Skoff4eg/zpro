@@ -13,12 +13,13 @@ class Insert extends DataBase{
     
     function insertData(){
         $query = "INSERT INTO $this->tabname ";
-        foreach ($data as $key => $value) {
+        foreach ($this->data as $key => $value) {
             $keys[] = $key;
             $values[] = $value;
         }
         $query .= "(`".implode($keys, "`,`"). "`) VALUES ";
         $query .= "('".implode($values, "','"). "')";
+        mysql_query($query);
     }
     
 }
