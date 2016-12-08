@@ -30,7 +30,7 @@
                 <i class='glyphicon glyphicon-edit icon-white'></i>
                 Edit
             </a>
-            <a class='btn btn-danger' href='#'>
+            <a class='btn btn-danger' href='?action=delete&id={$Allresult[$i]['id']}'>
                 <i class='glyphicon glyphicon-trash icon-white'></i>
                 Delete
             </a>

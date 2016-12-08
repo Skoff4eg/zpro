@@ -8,7 +8,7 @@
     include("views/allcomments.php");
     if ($_GET['action'] == 'edit'){
         $new3 = new Select("comments");
-        $Allresult2 = $new2->getRecordById($_GET['id']);
+        $Allresult2 = $new3->getRecordById($_GET['id']);
        // print_r ($Allresult2);
         include ("views/updatecomment.php"); 
     }
@@ -25,8 +25,28 @@
         $Chenget = new Update("comments", $data_update);
         $Upresult = $Chenget->updateData();
         //header ("Location:".$_SERVER['DOCUMENT_ROOT'].'index.php');
-
+        echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=/index.php'>";
     }
+    if ($_GET['action'] == 'delete'){
+        $new5 = new Select("comments");
+        $result_del = $new5->getRecordById($_GET['id']);
+        include ("views/delete.php");
+        if ($_POST['del_ok']){    
+            include ("models/db/Delete.php");
+            $del_data = array();
+            $del_data['id'] = $_GET['id'];
+            $new4 = new Delete("comments", $del_data);
+            $Allresult3 = $new4->deleteData();
+            print_r ($Allresult3);
+            echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=/index.php'>";
+            print_r ($Allresult3);
+        }
+        if ($_POST['del_no']){
+            echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=/index.php'>";
+        }
+         print_r ($_POST);   //include ("views/updatecomment.php"); del_no del_ok
+    }
+
      
 }
 else{
@@ -36,6 +56,7 @@ else{
     include ("controllers/Image.php");
     echo $_SERVER['DOCUMENT_ROOT'];
     if($_POST['c_ok']){
+        
         $data_insert = array();
         $data_insert['id'] = '';
         $data_insert['name'] = $_POST['c_username'];
