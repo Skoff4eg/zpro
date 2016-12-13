@@ -8,5 +8,5 @@ echo "<div class=\"center\"  style=\"margin: 10px auto;\">";
 echo   "</div>";
 ?>
 <form action="" method="post">
-<input type="submit" name="c_ok" value="Send" >
+<input type="submit" id="c_ok" name="c_ok" value="Send" >
 </form>
