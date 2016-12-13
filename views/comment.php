@@ -10,7 +10,7 @@
 <input type="submit" name="c_ok" value="Send" >
 <input type="button" id="c_preview" value="Preview" >
 </form>
-<script src="/js/preview.js"></script>
+
 <?php //include("/var/www/zpro.co/zpro/js/preview.js");?>
 </div>
 <div class="col-md-2">

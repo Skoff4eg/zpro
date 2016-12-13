@@ -50,6 +50,26 @@
      
 }
 else{
+    include ("views/sort.php");
+    include ("models/db/DataBase.php");
+    if(isset($_GET['sort'])){
+        print_r($_GET);
+        $st = $_GET['sort'];
+        $a = spliti ("z", $st, 5);
+        print_r($a);
+        //include ("models/db/DataBase.php");
+        include ("models/db/Select.php");
+        $new1 = new Select("comments");
+        $result = $new1->getSortRecords($a);
+       // print_r ($result);
+    
+
+    }else{
+        //include ("models/db/DataBase.php");
+        include ("models/db/Select.php");
+        $new1 = new Select("comments");
+        $result = $new1->getPublishedData();
+    }
     include ("views/publishedcomment.php");
     include ("views/comment.php");
     include ("controllers/login.php");

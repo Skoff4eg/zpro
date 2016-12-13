@@ -11,6 +11,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- The fav icon -->
     <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="js/preview.js"></script>
 
 </head>
 

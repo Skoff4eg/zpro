@@ -15,6 +15,14 @@ class Select extends DataBase{
             return $data;
         }
     }
+    function getSortRecords($sort){
+        $query = "SELECT * FROM $this->tabname ORDER BY $sort[0] $sort[1]";
+        if($sqldata = mysql_query($query)){
+            for($i = 0;$i < mysql_num_rows($sqldata); $i++)
+                $data[$i] = mysql_fetch_array($sqldata);
+        }
+        return $data;
+    }
     
     function getAllData(){
         $query = "SELECT * FROM $this->tabname";

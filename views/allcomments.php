@@ -5,6 +5,7 @@
         <th>Email</th>
         <th>Status</th>
         <th>Text</th>
+        <th>Image</th>
         <th>Actions</th>
         <th>Date created</th>
     </tr>
@@ -25,6 +26,7 @@
         <td class='center'>{$Allresult[$i]['email']}</td>
         {$stat}
         <td class='center'>{$Allresult[$i]['text']}</td>
+        <td class='center'><img src=\"{$Allresult[$i]['image']}\"></td>
         <td class='center'>
             <a class='btn btn-info' href='?action=edit&id={$Allresult[$i]['id']}'>
                 <i class='glyphicon glyphicon-edit icon-white'></i>
