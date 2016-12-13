@@ -1,13 +1,16 @@
+<div class="col-sm-12 col-lg-12">
+<div class="col-sm-1 col-lg-1"></div>
+<div class="col-sm-10 col-lg-10">
 <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
     <thead>
     <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Status</th>
-        <th>Text</th>
-        <th>Image</th>
-        <th>Actions</th>
-        <th>Date created</th>
+        <th class='center'>Name</th>
+        <th class='center'>Email</th>
+        <th class='center'>Status</th>
+        <th class='center'>Text</th>
+        <th class='center'>Image</th>
+        <th class='center'>Actions</th>
+        <th class='center'>Date created</th>
     </tr>
     </thead>
     <tbody>
@@ -22,7 +25,7 @@
         </td>";
             }
     echo "<tr>
-        <td>{$Allresult[$i]['name']}</td>
+        <td class='center'>{$Allresult[$i]['name']}</td>
         <td class='center'>{$Allresult[$i]['email']}</td>
         {$stat}
         <td class='center'>{$Allresult[$i]['text']}</td>
@@ -42,3 +45,6 @@
     ?>
     </tbody>
     </table>
+    </div>
+    <div class="col-sm-1 col-lg-1"></div>
+    </div>

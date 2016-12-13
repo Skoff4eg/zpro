@@ -1,6 +1,4 @@
-<?php
-
-?>
+<div class="sort-form">
 <form action="" method="GET">
 <select name="sort">
  <option value="createdzASC">Дата по возрастнию</option>
@@ -12,10 +10,7 @@
 </select>
 <input type="submit" value="ok"></p>
 </form>
+</div>
 <?php
-print_r($_GET);
-$st = $_GET;
-$a = spliti ("z", $st['sort'], 5);
-print_r($a);
 
 ?>

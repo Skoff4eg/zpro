@@ -9,6 +9,7 @@
     <!-- The styles -->
     <link href="css/login.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
     <!-- The fav icon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <script src="js/preview.js"></script>
@@ -16,10 +17,7 @@
 </head>
 
 <body>
-<div class="container">
-<div class="row">
-<div class="col-lg-1 col-md-1"></div>
-<div class="col-lg-10 col-md-10">
+
 <?php
 session_start();
 

@@ -3,10 +3,10 @@ window.onload = function(){
 	    if( v && document.getElementById('c_view')) {
 	        v.onclick = function(){
                 //alert(document.forms[1]);
-            	var str = '<div class="c_name">Автор: ' + document.forms[1].c_username.value + '</div>';
-                str += '<div>Email: ' + document.forms[1].c_useremail.value + '</div>';
-                str += '<div>Коментарий: ' + document.forms[1].c_msg.value + '</div>';
-                str += '<img id="blah" src="#" />';
+            	var str = '<div class="c_name list-group-item">Автор: ' + document.forms[1].c_username.value + '</div>';
+                str += '<div class="list-group-item">Email: ' + document.forms[1].c_useremail.value + '</div>';
+                str += '<div class="list-group-item">Коментарий:<br> ' + document.forms[1].c_msg.value + '</div>';
+                str += '<div class="list-group-item"><img id="blah" src="#" /></div>';
                         
                 var reader = new FileReader();
 

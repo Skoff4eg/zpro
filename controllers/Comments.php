@@ -50,6 +50,7 @@
      
 }
 else{
+    include ("views/article.php");
     include ("views/sort.php");
     include ("models/db/DataBase.php");
     if(isset($_GET['sort'])){
